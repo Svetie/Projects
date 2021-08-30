@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Update Painting</title>
+</head>
+<body>
+    <h1 id="h1NewPainting">Edit a Painting</h1>
+    <div id="containerNewPainting">
+        <a href="/dashboard" class="badge badge-success">Dashboard</a>
+        <a href="/logout" class="badge badge-success">Logout</a>
+
+        <form action="/update_painting/{{painting.id}}" method="post">
+                <div class="form-group">
+                    <label for="title">Title:</label>
+                    <input type="text" name="title" class="form-control" value="{{painting.title}}">
+                </div>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <textarea required="required" name="description" id="description" class="form-control" rows="4" cols="50">{{painting.description}}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="price">Price:</label>
+                    <input type="number" step="0.01" name="price" class="form-control" rows="4" cols="50" value="{{painting.price}}">
+                </div>
+                <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+    </div>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for message in messages %}
+                <p style="color: red; font-size: 12px;">{{message}}</p>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+</body>
+</html>

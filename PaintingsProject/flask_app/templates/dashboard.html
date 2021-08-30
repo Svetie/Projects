@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Dashboard</title>
+</head>
+<body>
+    <div id="containerDashboard">
+        <a href="/paintings/new" class="badge badge-primary" >Add Painting</a>
+        <a href="/logout" class="badge badge-danger">Logout</a>
+        {% with messages = get_flashed_messages() %}     <!-- declare a variable called messages -->
+            {% if messages %}                            <!-- check if there are any messages -->
+                {% for message in messages %}            <!-- loop through the messages -->
+                    <p>{{message}}</p>                   <!-- display each message in a paragraph tag -->
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <h1>Welcome {{ user.first_name }} {{user.last_name}}</h1>
+        <h3>Paintings</h3>
+
+        <table class="table table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Title</th>
+                    <th scope="col">Created by</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                {% for painting in all_paintings %}
+                <tr>
+                    <th scope="row"><a href="/paintings/{{ painting.id }}">{{ painting.title }}</a></th>
+                    <td>{{ painting.user.first_name }} {{ painting.user.last_name }}</td>
+                    <td>
+                        {% if user.id == painting.user.id %}
+                            <a href="/paintings/{{painting.id}}/edit" class="badge badge-success" >Edit</a>
+                            <a href="/delete/{{painting.id}}" class="badge badge-danger" >Delete</a>
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+    </div>
+</body>
+</html>

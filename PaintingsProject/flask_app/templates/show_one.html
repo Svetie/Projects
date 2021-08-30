@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Show Painting</title>
+</head>
+<body>
+    <div id="containerNewPainting">
+        <a href="/paintings/new" class="badge badge-primary" >Add Painting</a>
+        <a href="/dashboard" class="badge badge-success">Dashboard</a>
+        <a href="/logout" class="badge badge-danger">Logout</a>
+
+        <h1 id="h1ShowPainting">{{ painting.title}}</h1>
+        <h3>Painted by {{painting.user.first_name}} {{painting.user.last_name}}</h3>
+
+        <h3>Description</h3>
+        <p>{{painting.description}}</p>
+
+        <h3>Price:</h3>
+        <p>{{ painting.price }}</p>
+
+

@@ -1,0 +1,33 @@
+.container {
+    width: 80%;
+    height: 75vh;
+    margin: 2% auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.leftSide {
+    width: 40%;
+    height: 100%;
+}
+
+.rightSide {
+    width: 40%;
+    height: 100%;
+}
+
+#containerNewPainting {
+    width: 50%;
+    margin-left: 10%;
+}
+
+#h1NewPainting {
+    margin-left: 10%;
+}
+
+#containerDashboard {
+    width: 60%;
+    margin-left: 10%;
+    margin-top: 3%;
+}
+
