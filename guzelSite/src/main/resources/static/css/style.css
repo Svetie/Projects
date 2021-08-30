@@ -1,0 +1,218 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#container {
+    background-image: url("/images/pink.PNG");
+
+    /* Background image is centered vertically and horizontally at all times */
+    background-position: center center;
+
+    /* Background image doesn’t tile */
+    background-repeat: no-repeat;
+
+    /* Background image is fixed in the viewport so that it doesn’t move when
+    the content’s height is greater than the image’s height */
+    background-attachment: fixed;
+
+    background-size: cover;
+    /* background-color: #faabe6; */
+
+    height: 100vh;
+}
+
+#containerServices {
+    background-image: url("/images/flower.jpg");
+    /* background-position: center center; */
+    background-size: cover;
+    height: auto;
+}
+
+#containerServicesRus {
+    background-image: url("/images/flower.jpg");
+    background-position: center center;
+    background-size: cover;
+    height: auto;
+}
+
+#containerApp {
+    background-image: url("/images/blueStars.PNG");
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+
+}
+
+#makeApp {
+    font-family: Merienda, Kalam, "Didact Gothic";
+    width: 80%;
+    margin: 0px auto;
+    text-shadow: 0 -1px 4px #FFF, 0 -2px 10px rgb(213, 238, 193), 0 -10px 20px #eed2b6, 0 -18px 40px rgb(157, 228, 238);
+}
+
+#btnApp {
+    background-color: rgb(6, 100, 189);
+    border-radius: 10px 100px / 120px;
+}
+#containerWork {
+    background-image: url("/images/pinkHearts.PNG");
+    background-position: center center;
+
+    /* Background image doesn’t tile */
+    background-repeat: no-repeat;
+
+    /* Background image is fixed in the viewport so that it doesn’t move when
+    the content’s height is greater than the image’s height */
+    background-attachment: fixed;
+
+    background-size: cover;
+    height: 110vh;
+}
+
+#navIndex {
+    background-color: rgb(158, 11, 84);
+    border-radius: 30px;
+    color: whitesmoke;
+    font-weight: bold;
+    width: 80%;
+    height: 10%;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: Papyrus, Arial, Helvetica, sans-serif;
+}
+
+#navServices {
+    background-color: rgb(5, 30, 139);
+    border-radius: 30px;
+    color: whitesmoke;
+    font-weight: bold;
+    width: 80%;
+    height: 10%;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: Papyrus, Arial, Helvetica, sans-serif;
+}
+
+#navAppoinment {
+    background-color: rgb(5, 30, 139);
+    border-radius: 30px;
+    color: whitesmoke;
+    font-weight: bold;
+    width: 80%;
+    height: 10%;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: Papyrus, Arial, Helvetica, sans-serif;
+}
+
+#navServicesRus {
+    background-color: rgb(5, 30, 139);
+    border-radius: 30px;
+    color: whitesmoke;
+    font-weight: bold;
+    width: 80%;
+    height: 10%;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: Papyrus, Arial, Helvetica, sans-serif;
+}
+
+#navWork {
+    background-color: rgb(158, 11, 84);
+    border-radius: 30px;
+    color: whitesmoke;
+    font-weight: bold;
+    width: 80%;
+    height: 10%;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    font-family: Papyrus, Arial, Helvetica, sans-serif;
+}
+
+#imagesDiv {
+    width: 70%;
+    margin: 0px auto;
+}
+
+.h3services {
+    margin-left: 30%;
+}
+
+.imgLash {
+    height: 45vh;
+    width: auto;
+    padding: 2% 2%;
+    border-radius: 30px;
+}
+
+#videoDiv {
+    width: 40%;
+    margin: 0px auto;
+
+}
+#videoLash {
+    height: 40vh;
+    width: auto;
+}
+
+#guzel {
+    font-family: "Brush Script MT", "Brush Script Std", "Lucida Handwriting", "Ink Free", cursive;
+    font-size: xx-large;
+    text-decoration: none;
+}
+
+#navItem1 {
+    text-decoration: none;
+}
+
+#beauty {
+    margin-left: 20%;
+    font-size: 5vh;
+    color: rgb(36, 7, 73);
+    text-shadow: 0 0 15px #FFF,
+}
+
+a {
+    color: rgb(230, 236, 230);
+    text-decoration: none;
+}
+
+a:visited {
+    color: rgb(230, 236, 230);
+}
+
+/* mouse over link */
+a:hover {
+    color: rgb(240, 163, 233);
+}
+
+  /* selected link */
+a:active {
+    color: rgb(246, 248, 133);
+}
+
+.navItem, a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: large;
+    text-shadow: 0 0 15px #FFF, 0 0 20px #f8a6d6, 0 0 30px #f1c7e8, 0 0 40px #ebe1ea, 0 0 55px #f4d3f7, 0 0 75px #f3cbea;
+}
+
+a.lang {
+    color:rgb(36, 7, 73);
+    margin-left: 10%;
+}
