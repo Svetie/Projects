@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Dashboard</title>
+</head>
+<body id="bodyDashboard">
+    <div id="containerDashboard">
+        <div class="row">
+            <h1 id="h1Dashboard"class="col">Welcome!</h1>
+            <h1 class="col">In<span id="touch">Touch</span></h1>
+        </div>
+
+        <p>This site allows you to store contact information of your family members, friends, cooworkers in separate groups</p>
+        <input type="button" id="btnCreateGroup" onclick="showCreateGroup()" value="Create Group" />
+
+        <div id="createGroup" style="display:none;">
+            <form action="/create_group" method="POST" id="formCreateGroup">
+                <div class="form-group">
+                    <label for="name">Name of group:</label>
+                    <input type="text" name="name" class="form-control beige">
+                </div>
+                <div class="form-group">
+                    <label for="description">Description:</label>
+                    <textarea name="description" class="form-control beige" cols="30" rows="4"></textarea>
+                </div>
+                <button type="submit" onclick="hideCreateGroup()" class="btn btn-warning">Create group</button>
+            </form>
+        </div>
+
+        <div id="groups">
+            {% for group in groups%}
+            <a href="/group/{{group.id}}">
+                <div class="group"><p id="groupName">{{group.name}}</p></div>
+            </a>
+            {% endfor %}
+        </div>
+
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

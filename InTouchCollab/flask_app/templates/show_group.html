@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Dashboard</title>
+</head>
+<body id="bodyShowGroup">
+    <div id="containerShowGroup">
+        <button class="btn btn-warning" onclick="window.location.href='/dashboard'">Dashboard</button>
+        <h1>Group {{group.name}}</h1>
+        <h3>Members</h3>
+        <div class="row">
+            <div class="col">Name</div>
+            <div class="col">Phone Number</div>
+        </div>
+
+            {% for user in group.users %}
+            {% if user: %}
+            <div class="row">
+                <div class="col">
+                    <a href="/user/{{ user.id }}">{{ user.last_name }} {{ user.first_name }}</a>
+                </div>
+                <div class="col">
+                    <p>{{ user.phone }} </p>
+                </div>
+                <div class="col" id="weather"></div>
+            </div>
+            <img src="{{user.phone_alt}}" alt="photo" srcset="">
+            <div id="city" style="display: none;" value="{{user.address.city}}">{{user.address.city}}</div>
+            <div id="state" style="display: none;" value="{{user.address.state}}">{{user.address.state}}</div>
+            {% endif %}
+            {% endfor %}
+
+        <button class="btn btn-danger" onclick="window.location.href='/delete_group'">Delete group</button>
+        <button class="btn btn-warning" onclick="window.location.href='/edit_group'">Add a Person to the Group</button>
+
+
+
+
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

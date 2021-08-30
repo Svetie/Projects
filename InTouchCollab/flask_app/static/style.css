@@ -1,0 +1,139 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Index.html */
+#containerIndex {
+    width: 100%;
+    height: 75vh;
+}
+
+#bodyIndex {
+    background-image: url("../static/img/arms-hands-map.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+#htmlIndex {
+    height: 75vh;
+}
+
+/* Login.html */
+#bodyLogin {
+    background-image: url("../static/img/connection.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 2px 2px 2px rgba(206,89,55,0);
+}
+
+#containerLogin {
+    width: 50%;
+    margin-left: 5%;
+}
+
+#h3Login {
+    margin-left: 5%;
+}
+
+
+/* Register.html */
+#bodyRegister {
+    background-image: url("../static/img/registerBack.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    color: #FFFFFF;
+    text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+    /* text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #ffffff, 0 0 30px #f0f1ed, 0 0 40px #e9f1e7, 0 0 55px #e5f0e3, 0 0 75px #e3ece0; */
+}
+
+#containerRegister {
+    width: 50%;
+    margin-left: 5%;
+    margin-top: 3%;
+}
+
+/* Dashboard.html */
+/* ______________ */
+#bodyDashboard {
+    background-image: url("../static/img/paperOld.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+#containerDashboard {
+    width: 80%;
+    margin: 2% auto;
+    text-shadow: 0 0 5px #FFF, 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #e5f0e2, 0 0 30px #ecf3ea, 0 0 40px #e0e6df, 0 0 55px #e3eee0, 0 0 75px #e9eee8;
+}
+
+#createGroup {
+    width: 50%;
+    margin-left: 2%;
+}
+
+#formCreateGroup {
+    margin-top: 1%;
+}
+
+#h1Dashboard {
+    color: rgb(15, 15, 37);
+}
+
+.beige {
+    background-color: rgb(221, 221, 205);
+}
+
+#groups {
+    margin: 3% 10%;
+    display: flex;
+    justify-content: space-around;
+}
+.group {
+    width: 8em;
+    height: 3em;
+    background-color: rgb(215, 226, 166);
+    border: 2px solid rgb(111, 112, 60);
+    border-radius: 50% 20% / 10% 40%;
+}
+
+#groupName {
+    margin-left: 19%;
+    font-size: 80%;
+    font-weight: bold;
+    color: #202c2d;
+    text-shadow: 0 1px #808d93, -1px 0 #cdd2d5, -1px 2px #808d93, -2px 1px #cdd2d5, -2px 3px #808d93, -3px 2px #cdd2d5, -3px 4px #808d93, -4px 3px #cdd2d5, -4px 5px #808d93, -5px 4px #cdd2d5; 
+}
+
+#btnCreateGroup {
+    background-color: rgb(234, 240, 208);
+    border-radius: 10% / 50%;
+    height: 3em;
+    width: 10em;
+}
+
+#bodyShowGroup {
+    background-image: url("../static/img/glass.jpg");
+}
+
+#containerShowGroup {
+    width: 80%;
+    margin: 3% auto;
+    font-size: 2rem;
+    color: #FFFFFF;
+    text-shadow: 1px 3px 0 #969696, 1px 13px 5px #aba8a8;
+}
+
+#touch {
+    color: rgb(9, 9, 75);
+}
+
+.right {
+    float: right;
+    margin-right: 5%;
+    margin-top: 1%;
+}
